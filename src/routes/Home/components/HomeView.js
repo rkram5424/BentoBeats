@@ -1,15 +1,17 @@
 import React from 'react'
-import DuckImage from '../assets/Duck.jpg'
-import './HomeView.scss'
+import SplitterLayout from 'react-splitter-layout';
 
 export const HomeView = () => (
-  <div>
-    <h4>Welcome!</h4>
-    <img
-      alt='This is a duck, because Redux!'
-      className='duck'
-      src={DuckImage} />
-  </div>
+  <SplitterLayout>
+  <SplitterLayout vertical='true'>
+    <div>Pattern</div>
+    <div>Instrument</div>
+  </SplitterLayout>
+  <SplitterLayout vertical='true'>
+    <div>Pianoroll</div>
+    <div>Mixer</div>
+  </SplitterLayout>
+  </SplitterLayout>
 )
 
 export default HomeView

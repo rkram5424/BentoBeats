@@ -1,5 +1,6 @@
 // We only need to import the modules necessary for initial render
 import CoreLayout from '../layouts/CoreLayout'
+import Home from './Home'
 import Pattern from './Pattern'
 import Pianoroll from './Pianoroll'
 import Instrument from './Instrument'
@@ -11,7 +12,7 @@ import Mixer from './Mixer'
 export const createRoutes = (store) => ({
   path        : '/',
   component   : CoreLayout,
-  indexRoute  : Pattern,
+  indexRoute  : Home,
   childRoutes : [
     Pattern,
     Pianoroll,
