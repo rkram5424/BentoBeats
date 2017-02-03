@@ -1,3 +1,6 @@
-import Mixer from './Mixer'
+import Mixer from './components/Mixer'
 
-export default Mixer
+export default {
+  path: 'mixer',
+  component : Mixer
+}

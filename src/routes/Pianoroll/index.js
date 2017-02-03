@@ -1,3 +1,6 @@
-import Pianoroll from './Pianoroll'
+import Pianoroll from './components/Pianoroll'
 
-export default Pianoroll
+export default {
+  path: 'pianoroll',
+  component : Pianoroll
+}

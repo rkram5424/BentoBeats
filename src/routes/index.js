@@ -11,9 +11,12 @@ import Mixer from './Mixer'
 export const createRoutes = (store) => ({
   path        : '/',
   component   : CoreLayout,
-  indexRoute  : Home,
+  indexRoute  : Pattern,
   childRoutes : [
-    CounterRoute(store)
+    Pattern,
+    Pianoroll,
+    Instrument,
+    Mixer
   ]
 })
 

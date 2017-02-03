@@ -1,3 +1,6 @@
-import Timeline from './Timeline'
+import Pattern from './components/Pattern'
 
-export default Timeline
+export default {
+  path: 'pattern',
+  component : Pattern
+}
