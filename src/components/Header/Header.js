@@ -1,9 +1,10 @@
 import React from 'react'
 import { IndexLink, Link } from 'react-router'
-import { Button, ButtonToolbar, ButtonGroup } from 'react-bootstrap'
+import { Navbar,Nav,NavItem,NavDropdown,MenuItem,ButtonToolbar,ButtonGroup,Button } from 'react-bootstrap';
 import './Header.scss'
 
 export const Header = () => (
+
   // <div>
   //   <Link to='/pattern' activeClassName='route--active'>
   //     Pattern
@@ -22,16 +23,35 @@ export const Header = () => (
   //   </Link>
   // </div>
   
-  <div>
-    <ButtonToolbar>
-      <ButtonGroup>
-        <Button>Pattern</Button>
-        <Button>Pianoroll</Button>
-        <Button>Instrument</Button>
-        <Button>Mixer</Button>
-      </ButtonGroup>
-    </ButtonToolbar>
-  </div>
+  <Navbar default>
+    <Navbar.Brand>
+      BentoBeats
+    </Navbar.Brand>
+    <Nav>
+      <NavDropdown eventKey={3} title="File" id="basic-nav-dropdown">
+        <MenuItem eventKey={3.1}>Action</MenuItem>
+        <MenuItem eventKey={3.2}>Another action</MenuItem>
+        <MenuItem eventKey={3.3}>Something else here</MenuItem>
+        <MenuItem divider />
+        <MenuItem eventKey={3.3}>Separated link</MenuItem>
+      </NavDropdown>
+    </Nav>
+    <Nav pullRight>
+      <ButtonToolbar className="navbar-btn">
+        <ButtonGroup>
+          <Button>Pattern</Button>
+          <Button>Pianoroll</Button>
+          <Button>Instrument</Button>
+          <Button>Mixer</Button>
+        </ButtonGroup>
+        <ButtonGroup>
+          <Button>
+            <span className="glyphicon glyphicon-cog" aria-hidden="true"></span>
+          </Button>
+        </ButtonGroup>
+      </ButtonToolbar>
+    </Nav>
+  </Navbar>
 )
 
 export default Header
