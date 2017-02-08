@@ -23,7 +23,7 @@ export const Header = () => (
   //   </Link>
   // </div>
   
-  <Navbar default>
+  <Navbar className="navbar navbar-default navbar-fixed-top">
     <Navbar.Brand>
       BentoBeats
     </Navbar.Brand>
